@@ -19,8 +19,8 @@ This is a tutorial for training an image classification model using Teachable Ma
 
 Connect the OLED-Display to the senseBox Eye with the QWIIC cable. Connect the senseBox Eye to your computer with the USB-C cable and turn it on.
 
-## tutorial
-### 1. Collecting a dataset
+## Tutorial
+### 1. Collect a dataset
 #### 1.1 Capture images with the senseBox Eye
 Open the folder `train/camera-capture` and open the file `camera-capture.ino` with the Arduino IDE 2. Choose "sensebox Eye" as the board. Compile and Upload. Make sure the Serial Monitor is NOT open.
 
@@ -60,3 +60,5 @@ Now open `deploy/senseBox-Eye-deploy.ino` in the Arduino IDE. Choose "sensebox E
 On the OLED-Display, you should now see the camera image on the left and the classification on the right.
 
 ![alt text](figures/rock_paper_scissors.gif)
+
+Note that if your trained classification model performs worse on the senseBox Eye than in Google Chrome it is due to the compression. In order for the model to fit on the senseBox Eye it had to be compressed (read: simplified) to a much smaller size.
